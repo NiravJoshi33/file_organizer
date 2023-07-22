@@ -1,5 +1,6 @@
 import os
 import shutil
+import datetime
 
 extension_data = {
     "compressed": ["zip", "7zip", "rar", "gz"],
@@ -10,7 +11,10 @@ extension_data = {
     "documents": ["pdf", "docx", "xlsx", "txt"]
 }
 
-path = input("Please enter the path:")
+file = open(r"C:\Users\nirav\Downloads\documents\file_organizer_log.txt", "a")
+file.write(f"{datetime.datetime.now()} - The script ran\n")
+# path = input("Please enter the path:")
+path = r"C:\Users\nirav\Downloads"
 files = os.listdir(path)
 
 for file in files:
